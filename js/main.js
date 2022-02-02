@@ -27,12 +27,13 @@ let weather = {
         this.fetchWeather(document.querySelector(".search-location").value);
     }
 };
-document.querySelector(".search-btn").addEventListener("click",function () {
+document.querySelector("#search-btn").addEventListener("click",function () {
     weather.search();
 })
-document.querySelector(".search-location").addEventListener("keyup", (event) =>{
+
+document.querySelector("#search-location").addEventListener("keyup", (event) =>{
     if (event.key =="Enter") {
-        weather.search() 
+        weather.search();
     }
 })
     weather.fetchWeather("dhaka")
